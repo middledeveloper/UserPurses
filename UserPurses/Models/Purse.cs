@@ -8,7 +8,8 @@ namespace UserPurses.Models
     public class Purse
     {
         public int Id { get; set; }
+        public int UserId { get; set; }
         public User User { get; set; }
-        public virtual ICollection<Account> Accounts { get; set; }
+        public ICollection<Account> Accounts { get; set; }
     }
 }
