@@ -26,7 +26,7 @@ namespace UserPurses.Controllers
             //https://localhost:44398/api/transfer/1/CHF/SEK/150 & optional /ratesSource
 
             var ratesActual = CheckRatesUpdateDate();
-            if (!ratesActual)
+            if (!ratesActual || ratesSource != null)
             {
                 var currencies = Currency.Import(ratesSource == null ? 
                     ctx.Configuration.First().CurrencySource :
