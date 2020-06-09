@@ -19,10 +19,10 @@ namespace UserPurses.Controllers
             ctx = context;
         }
 
-        [HttpGet("{userId}/{currency}")]
+        [HttpGet("{userId}")]
         public ActionResult<List<AccountModel>> Get(int userId)
         {
-            //https://localhost:44398/api/details/1/HUF
+            //https://localhost:44398/api/details/1
 
             var user = ctx.Users.FirstOrDefault(x => x.Id == userId);
             if (user == null)
