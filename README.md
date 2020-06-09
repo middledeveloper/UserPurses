@@ -13,6 +13,6 @@ https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml
 адрес API последним параметром в строке URL перевода из одной валюты в другую.
 Следует учитывать, что работа с другими API в приложении не описана.
 
-Например: ttps://localhost:44398/api/transfer/1/CHF/SEK/150/адрес_API
+Например: https://localhost:44398/api/transfer/1/CHF/SEK/150/адрес_API
 
 *Первый опыт с ASP.Net CORE, всегда работал только с .Net Framework
