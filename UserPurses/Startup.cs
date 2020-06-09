@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using WebAPIApp.Models;
 
 namespace UserPurses
@@ -11,7 +12,10 @@ namespace UserPurses
         {
             var con = "Server=(localdb)\\mssqllocaldb;Database=pursesdbstore;Trusted_Connection=True;MultipleActiveResultSets=true";
             services.AddDbContext<PurseContext>(options => options.UseSqlServer(con));
-            services.AddControllers(); // no views
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
         }
 
         public void Configure(IApplicationBuilder app)

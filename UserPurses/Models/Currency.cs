@@ -42,5 +42,10 @@ namespace UserPurses.Models
 
             return currencies;
         }
+
+        public static string ConvertToStr(decimal amount)
+        {
+            return String.Format("{0:0.00}", amount);
+        }
     }
 }

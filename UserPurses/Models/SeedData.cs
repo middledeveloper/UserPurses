@@ -58,7 +58,7 @@ namespace MvcMovie.Models
             {
                 ctx.Accounts.Add(new Account() {
                     Currency = currencies[random.Next(currencies.Count)],
-                    Amount = random.Next(0, 300),
+                    Amount = random.Next(1000, 30000),
                     Purse = purse
                 });
             }
